@@ -1,0 +1,51 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+  body {
+    @apply bg-bg font-sans text-[14px] leading-[1.45] text-ink antialiased;
+  }
+  h1,
+  h2 {
+    @apply font-serif font-semibold tracking-wide;
+  }
+  input[type='number']::-webkit-inner-spin-button {
+    @apply opacity-40;
+  }
+  ::selection {
+    @apply bg-gold/30;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply mb-3 text-[12px] font-semibold uppercase tracking-[0.08em] text-muted;
+  }
+  .tbl {
+    @apply w-full border-collapse text-[13px];
+  }
+  .tbl th {
+    @apply border-b border-line px-2 py-2 text-left text-[11px] font-semibold uppercase tracking-[0.06em] text-muted;
+  }
+  .tbl td {
+    @apply border-b border-line px-2 py-2 align-middle;
+  }
+  .tbl tr:last-child td {
+    @apply border-b-0;
+  }
+  .tbl .num {
+    @apply text-right tabular-nums;
+  }
+}

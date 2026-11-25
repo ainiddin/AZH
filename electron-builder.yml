@@ -1,0 +1,22 @@
+appId: kz.ainiddin.azh
+productName: AZH
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**
+  - package.json
+asarUnpack: []
+win:
+  target: nsis
+  artifactName: AZH-Setup-${version}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: AZH
+# Автообновление: релизы публикуются в этот репозиторий (НЕ в репозиторий данных)
+publish:
+  provider: github
+  owner: ainiddin
+  repo: AZH
